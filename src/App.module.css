@@ -1,5 +1,5 @@
 .header {
-  background-color: #282c34;
+  background-color: var(--background-color);
   height: 70px;
   display: flex;
   flex-direction: row;
@@ -11,7 +11,7 @@
 .logo {
   display: flex;
   align-items: center;
-  color: #09d3ac;
+  color: var(--primary-color);
   font-size: 2.4rem;
 }
 
