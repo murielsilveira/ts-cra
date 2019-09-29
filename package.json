@@ -7,7 +7,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'"
+    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
+    "bundlesize": "bundlesize"
   },
   "dependencies": {
     "react": "^16.10.1",
@@ -20,6 +21,7 @@
     "@types/react": "^16.9.3",
     "@types/react-dom": "^16.9.1",
     "@types/react-router-dom": "^5.1.0",
+    "bundlesize": "^0.18.0",
     "react-scripts": "^3.1.2",
     "source-map-explorer": "^2.1.0",
     "typescript": "^3.6.3"
@@ -38,5 +40,15 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "bundlesize": [
+    {
+      "path": "build/**/main*.js",
+      "maxSize": "5 kB"
+    },
+    {
+      "path": "build/**/*.chunk.js",
+      "maxSize": "50 kB"
+    }
+  ]
 }
